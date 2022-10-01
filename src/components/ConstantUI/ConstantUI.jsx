@@ -24,7 +24,7 @@ export default function ConstantUI(props){
                     <span className="button" onClick={props.onPrivacyPolicy}> privacy policy </span>• 
                     <span className="button"> contact me </span>
                 </div>
-                <div id="versionDisplay" className="button"> v1.0.0 </div>
+                <div id="versionDisplay" className="button"> beta v1.0.0 </div>
             </div>
         </>
     )
