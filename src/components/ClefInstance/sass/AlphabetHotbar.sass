@@ -1,0 +1,26 @@
+.alphabet_hotbar_container
+    width: fit-content
+    position:  absolute
+    display: grid
+    grid-auto-flow: column
+    left: 0
+    right: 0
+    bottom: 0
+    button
+        transition: margin .5s ease
+        &[class*="active"]
+            background-color: lightgray
+        &:active
+            background-color: lightgray
+        &:hover
+            cursor: pointer
+        position: relative
+        margin-top: auto
+        text-transform: uppercase
+        font-size: 24px
+        height: 66px * 1.5
+        width: 32px * 1.5
+        div
+            position: absolute
+            top: 3px
+            left: 6px

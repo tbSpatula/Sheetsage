@@ -1,0 +1,79 @@
+
+@keyframes pop
+    0%
+        transform: translateY(0%)
+    25%
+        transform: translateY(-7.25%)
+    100%
+        transform: translateY(0%)
+
+
+.clef_instance_container
+    transition: height .5s ease
+    overflow: visible
+    margin-inline: auto
+    position: absolute
+    left: 0
+    right: 0
+    height: calc(75vh - 20px)
+    top: 0
+    bottom: 0
+    margin-block: auto
+    #highestScore
+        width: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        svg
+            margin-right: 10px
+    .music_sheet_points_container
+        margin-top: 0
+        position: relative
+        span
+            padding-inline: 5px
+            width: fit-content  
+            display: inline-block
+            scale: 0.8
+        span.pop 
+            transition: scale .5s ease
+            scale: 1
+        span:first-child
+            text-transform: uppercase
+        span:nth-child(2)
+            margin-left: 32px
+            color: gray
+            text-transform: lowercase
+        span:nth-child(3)
+            display: inline-block
+            float: right
+
+    div
+        margin-inline: auto 
+    .music_sheet_container
+        position: absolute
+        left: 0 
+        right: 0
+        top: 0
+        bottom: 0
+        margin-top: auto
+        margin-bottom: auto
+        width: fit-content  
+        transform: scale3d(0.9,0.9,0.9)
+        &.pop
+            transition: transform .5s ease
+            transform: scale3d(1,1,1)
+        
+        overflow: visible !important
+        svg
+            overflow: visible  
+            box-shadow : 0px -0px 10000px transparent            
+        svg g
+            transition: animation .5s ease
+        svg g.correct
+            color: #002366
+            animation-name: pop
+            animation-duration: .5s
+        svg g.incorrect
+            color: #990012
+            animation-name: pop
+            animation-duration: .5s

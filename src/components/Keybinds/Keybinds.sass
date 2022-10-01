@@ -1,0 +1,45 @@
+#keybindMenu
+    .dropdowntitle
+        margin-bottom: 10px
+        display: flex
+        span
+            margin-left: 5px
+        svg
+            margin-right: 5px
+            margin-left: auto
+            margin-block: auto
+            transition: all .5s ease
+        &.active
+            svg
+                transform: rotateZ(90deg)
+    .dropdownelement
+        overflow: hidden
+        transition: max-height .5s ease
+        &:not(.active)
+            max-height: 0px
+        &.active
+            max-height: 400px  
+    .frame
+        width: 100%
+        margin-bottom: 5px
+        padding-block: 2.5px
+        &:hover
+            cursor: pointer
+    .title-36
+        margin-bottom: 20px
+    .gray-border
+        text-transform: none !important
+    .red
+        .gray-border
+            background-color: transparentize(red,0.5 )
+    .flex-18
+        display: flex
+        align-items: center
+        span:last-child
+            display: inline-block
+            margin-left: auto
+            margin-right: 10px
+            padding-block: 5px
+        span:first-child
+            text-transform: capitalize
+            margin-left: 10px

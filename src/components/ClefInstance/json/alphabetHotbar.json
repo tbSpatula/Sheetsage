@@ -1,0 +1,51 @@
+[
+    {
+        "index": 1,
+        "display": "A",
+        "key": "A",
+        "keyinput": "KeyA",
+        "keyID": "A note"
+    },
+    {
+        "index": 2,
+        "display": "B",
+        "key": "B",
+        "keyinput": "KeyB",
+        "keyID": "B note"
+    },
+    {
+        "index": 3,
+        "display": "C",
+        "key": "C",
+        "keyinput": "KeyC",
+        "keyID": "C note"
+    },
+    {
+        "index": 4,
+        "display": "D",
+        "key": "D",
+        "keyinput": "KeyD",
+        "keyID": "D note"
+    },
+    {
+        "index": 5,
+        "display": "E",
+        "key": "E",
+        "keyinput": "KeyE",
+        "keyID": "E note"
+    },
+    {
+        "index": 6,
+        "display": "F",
+        "key": "F",
+        "keyinput": "KeyF",
+        "keyID": "F note"
+    },
+    {
+        "index": 7,
+        "display": "G",
+        "key": "G",
+        "keyinput": "KeyG",
+        "keyID": "G note"
+    }
+]

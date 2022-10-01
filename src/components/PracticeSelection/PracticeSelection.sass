@@ -1,0 +1,67 @@
+.gridContainer
+    display: grid
+    grid-template-columns: auto auto
+    div.settingsid .title-36
+        margin-bottom: 25px
+    div.width.settingsid
+        transition: opacity 0.5s ease,max-width 0.5s ease-out,min-width 0.5s ease-out
+        overflow: hidden
+        opacity: 0
+        &:not(.active)
+            max-width: 0 !important
+            min-width: 0 !important
+        overflow: visible
+        &.active
+            opacity: 1
+
+.webtitle
+        .icons
+            display: flex
+            flex-direction: row
+            transform: translateY(35%)
+            margin-left: auto
+            svg
+                margin-left: 20px
+                &:hover
+                    color: black
+                    cursor: pointer
+        div
+            margin-block: auto
+            height: fit-content !important
+            top: 0
+            bottom: 0
+            display: inline-block
+#practiceSelection
+    .advancedOptions
+        div
+            margin-bottom: 10px
+    .adv_button
+        display: flex
+        align-items: center
+        justify-content: center
+        color: gray
+        margin-top: 10px
+        span 
+            width: fit-content
+            display: block
+            margin-right: 20px
+        svg
+            transform: translateY(10%)
+    div:has(.regular-24-gray)
+        user-select: none
+        display: flex
+        flex-direction: row
+        align-items: flex-end
+        margin-bottom: 40px
+        span.regular-24-gray
+            display: block
+            margin-left: auto
+
+    div.roboto-24-gray
+        margin-top: 10px
+        display: flex
+        align-items: center
+        justify-content: center
+        svg
+            transform: translateY(10%)
+        
