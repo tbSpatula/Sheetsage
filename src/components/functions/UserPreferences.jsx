@@ -10,7 +10,12 @@ function setUserPreference(key=""){
 }
 
 function getUserPreference(key){
-    return JSON.parse(localStorage.getItem("userPreferences"))[key]
+    try {
+        const userpref = JSON.parse(localStorage.getItem("userPreferences"))[key]
+        return userpref
+    } catch(error){
+        return null
+    }
 }
 
 export {getUserPreference,setUserPreference}
