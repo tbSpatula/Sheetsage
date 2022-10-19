@@ -11,9 +11,10 @@ import { motion,AnimatePresence } from "framer-motion";
 import UUID from "./components/functions/UUID";
 
 import "./App.sass"
-import Keybinds from "./components/Keybinds/Keybinds";
+import Options from "./components/Options/Options";
 import About from "./components/About/About";
 import PrivacyPolicy from "./components/PrivacyPolicy/PrivacyPolicy";
+import loadFunction from "./components/functions/loadFunction";
 
 
 function AnimationWrapper(props){
@@ -98,10 +99,11 @@ function App() {
 
   useEffect(() => {
     keybindInit()
+    loadFunction()
   }, []);
 
   const pages = {
-    "options": <AnimationWrapper key={2}> <Keybinds onGoBack={() => setpage(pages.practiceSelection)}/> </AnimationWrapper>,
+    "options": <AnimationWrapper key={2}> <Options onGoBack={() => setpage(pages.practiceSelection)}/> </AnimationWrapper>,
     "about": <AnimationWrapper key={3}> <About onGoBack={() => setpage(pages.practiceSelection)}/> </AnimationWrapper>,
     "privacyPolicy": <AnimationWrapper key={4}> <PrivacyPolicy onGoBack={() => setpage(pages.practiceSelection)}/> </AnimationWrapper>,
     "practiceSelection": 

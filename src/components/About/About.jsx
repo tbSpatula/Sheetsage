@@ -19,8 +19,7 @@ export default function About(props) {
             <div id="Aboutpage" className="width2 unique">
                 
                 <Section title="about">
-                    Pro notes is a tool for testing and improving ones skill in reading musical sheet notes.
-                    Enjoy offline play or create an account and have a shot at the leaderboard.
+                    Sheet Sage is a tool for testing and improving ones skill in reading music sheets.
                 </Section>
 
                 <Section title="Bug report">

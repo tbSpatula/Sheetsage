@@ -14,16 +14,15 @@
         svg
             margin-right: 5px
     &.active
-        background-color: gainsboro
+        background-color: var(--lightest)
     &:last-child
         margin-bottom: 0px
-    &:active
-        background-color: gainsboro
     &:hover 
         cursor: pointer
     span,img,svg
         user-select: none
-    img
+    svg,img
+        color: var(--dark)
         display: inline-block
         width: fit-content
         margin-left: auto

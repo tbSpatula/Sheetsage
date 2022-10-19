@@ -41,7 +41,7 @@
             text-transform: uppercase
         span:nth-child(2)
             margin-left: 32px
-            color: gray
+            color: var(--light)
             text-transform: lowercase
         span:nth-child(3)
             display: inline-block
@@ -50,6 +50,7 @@
     div
         margin-inline: auto 
     .music_sheet_container
+        color: var(--dark)
         position: absolute
         left: 0 
         right: 0
@@ -70,7 +71,7 @@
         svg g
             transition: animation .5s ease
         svg g.correct
-            color: #002366
+            color: var(--theme)
             animation-name: pop
             animation-duration: .5s
         svg g.incorrect

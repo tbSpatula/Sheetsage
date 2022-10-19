@@ -3,16 +3,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;600&display=swap')
 
 @mixin  shadow()
-    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white
+    color: var(--dark)
 
-@mixin blackshadow()
-    text-shadow: -1px -1px 0 whitesmoke, 1px -1px 0 whitesmoke, -1px 1px 0 whitesmoke, 1px 1px 0 whitesmoke !important
-    
+:root
+    --dark: black
+    --lightest: gainsboro
+    --light-2: darkgray
+    --light: gray
+    --background:#f1f1f1
+    --theme: #002366
 body 
     scrollbar-gutter: stable both-edges
     user-select: none
     margin: 0
-    background-color: #f1f1f1
+    background-color: var(--background)
     overflow: hidden
 
 ::-webkit-scrollbar
@@ -22,7 +26,7 @@ body
 ::-webkit-scrollbar-thumb 
     border-radius: 5px
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5)
-    background: #002366
+    background: var(--theme)
     
 .thin 
     font-weight: 400 !important
@@ -42,11 +46,10 @@ body
     src: url("./PARCHM.TTF")
 
 .themecolor
-    color:#002366 !important
+    color: var(--theme) !important
 .gray 
-    color: gray !important
+    color: var(--light) !important
 .parchm
-    @include blackshadow
     @extend .themecolor
     &::first-letter
         font-family: Parchement !important
@@ -59,20 +62,17 @@ body
     align-items: center
     justify-content: center
     position: absolute
-    height: 100vh !important
-    background-color: transparentize(#f1f1f1,0.10)
+    height: 100vh !important 
+    background:  var(--background)
     width: 100vw !important
     z-index: 10
     
 .gray-border
-    background-color: gainsboro
-    box-shadow: inset -1px 1px 2px 0px white,
-    border: 1px solid gray
-    border-bottom: 1px solid black
-    border-left: 1px solid black
+    background-color: var(--lightest)
+    border: 1px solid var(--light)
     padding-inline: 10px
     padding-block: 10px
-    border-radius: 10px
+    border-radius: 5px
 
 .input:has(input)
     @extend .flex-18
@@ -90,31 +90,6 @@ body
             position: absolute
             right: 0
         width: 100%
-    input[type="range"]
-            width: 100%
-            appearance: none
-            height: 6px
-            border-radius: 4px
-            margin-block: 20px 5px
-            background-color: darkgray !important
-            border-top: 1px solid black
-            border-right: 1px solid black
-            outline: 0
-            padding: 0
-            accent-color: pink
-            &::-webkit-slider-thumb 
-                width: 10px
-                appearance: none
-                cursor: ew-resize
-                background: #f1f1f1 !important
-                border-left: 1px solid 
-                border-bottom: 2px solid gray
-                border-top: 1px solid white
-                border-right: 1px solid white
-                border-radius: 10px
-                box-shadow: 1px 0px 2px black
-                height: 20px !important
-
 .presence_div
     overflow-y: auto !important
     transition: all .5s ease
@@ -139,7 +114,7 @@ body
 
 .flex-18-gray
     font-family: 'Roboto Flex', sans-serif
-    color: gray
+    color: var(--light)
     font-size: 18px
     @include shadow
 
@@ -151,19 +126,22 @@ body
 .roboto-24-gray
     font-family: roboto
     font-size: 24px
-    color: gray
+    color: var(--light)
 
 .regular-24
+    color: var(--dark)
     font-family: 'Cormorant Garamond'
     font-size: 24px
 
 .regular-36
+    color: var(--dark)
     font-family: 'Cormorant Garamond'
     font-size: 36px
 .regular-24-gray
+    color: var(--dark)
     font-family: 'Cormorant Garamond'
     font-size: 24px
-    color: gray
+    color: var(--light)
 
 
 .title-36
@@ -194,40 +172,34 @@ body
         height: fit-content
 
 .button:not(.border)
-    border-radius: 10px
+    border-radius: 5px
     padding-block: 2.5px
     &:hover
-        background-color: gainsboro
+        background-color: var(--lightest)
         cursor: pointer
     &:active
-        background-color: gainsboro
+        background-color: var(--lightest)
 .border
     outline: none
     background-color: transparent
-    border: none 
-    border-left: 1px solid 
-    border-bottom: 1px solid gray
-    border-top: 1px solid white
-    border-right: 1px solid white
-    border-radius: 10px
-    box-shadow: 1px 0px 1px black, 0px 1px 4px darkgray
-    text-shadow:  -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white
+    border: 1px solid var(--dark)
+    border-radius: 5px
     user-select: none
     &:active
-        background-color: gainsboro
+        background-color: var(--lightest)
     &:hover
         cursor: pointer
 
 .frame:not(.border):not(.button)
-    background-color: gainsboro
-    border-radius: 10px
+    background-color: var(--lightest)
+    border-radius: 5px
     padding-block: 5px
     display: inline-block
     align-items: center
     align-content: center
 
 .border.frame
-    background-color: #f1f1f1
+    background-color: var(--background)
     &:active
         background-color: initial 
     &:hover
@@ -266,3 +238,12 @@ p
     margin-block: 0 !important
     margin-bottom: 30px !important
     @extend .flex-18
+
+li
+    &::first-letter
+        text-transform: capitalize
+    text-transform: none
+    text-align: justify
+    font-weight: 300
+    margin-block: 0 !important
+    @extend .flex-18  
