@@ -34,8 +34,12 @@ export default function Pallete() {
                 themeName={"light"}
             />
             <ThemeElement 
-                themeColors={["gray","#080808","#0052eb","#383838","#181818","#0052eb"]}
+                themeColors={["#a5a5a5","#080808","#0052eb","#383838","#181818","#0052eb"]}
                 themeName={"dark"}
+            />
+            <ThemeElement 
+                themeColors={["#001c30","#d8e8f5","#7fa6b7","#69a6cb","#f4f7ff","#0058ff"]}
+                themeName={"cloud"}
             />
         </div>
     )

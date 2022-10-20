@@ -247,3 +247,28 @@ li
     font-weight: 300
     margin-block: 0 !important
     @extend .flex-18  
+
+@media screen and (max-device-width:320px)
+    .alphabet_hotbar_container div.border.regular-24
+        height: 99px * 0.75
+        width: 48px * 0.75
+    .music_sheet_container
+        scale: 1 !important
+@media screen and (max-device-width:480px)
+    .parchm
+        &::first-letter
+            font-size: 36px * 2
+            letter-spacing: -10px
+        font-size: 36px * 0.75
+    .flex-18
+        font-size: 18px * 0.75
+    .title-24
+        font-size: 24px * 0.75
+    .title-36
+        font-size: 36px * 0.75
+    .webtitle .icons 
+        transform: translateY(15%) !important
+    .music_sheet_container
+        scale: 1.25
+    p
+        margin-inline: 10px

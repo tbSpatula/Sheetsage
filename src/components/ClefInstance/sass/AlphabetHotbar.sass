@@ -6,7 +6,7 @@
     left: 0
     right: 0
     bottom: 0
-    button
+    div.border.regular-24
         transition: margin .5s ease
         &:hover
             cursor: pointer
@@ -16,6 +16,8 @@
         font-size: 24px
         height: 66px * 1.5
         width: 32px * 1.5
+        &:active, &.active
+            background-color: var(--lightest)
         div
             position: absolute
             top: 3px

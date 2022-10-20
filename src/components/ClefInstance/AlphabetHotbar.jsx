@@ -12,9 +12,9 @@ function ButtonBuilder(props){
     
     return(
         <div className="alphabet_hotbar_element">
-            <button className="border regular-24" onClick={() => props.onClick()} id={props.id}>
+            <div id={props.id} className="border regular-24" onClick={() => props.onClick()} >
                 <div> {props.display} </div>
-            </button>
+            </div>
         </div>
     )
 }
