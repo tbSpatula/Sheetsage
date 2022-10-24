@@ -67,7 +67,7 @@ export default function ClefInstance(props){
         _sheet.onComplete(() => {
             setTimeout( handleUpdate , 250);
         })
-        _sheet.onCorrect(() => {
+        _sheet.onCorrect((x) => {
             _points.setPoints() ; _points.batchTextChange(points_id,combo_id)
             corrects.current++
         })

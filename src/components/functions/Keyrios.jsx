@@ -39,6 +39,7 @@ function Flicker(props) {
         if (!triggered.current && event.code === keyComparison()) {
             triggered.current = true ; props.onkeydown() 
         }
+        event.preventDefault()
     },[props,keyComparison])
     const keyup = useCallback((event) => {
         if( event.code === keyComparison()){

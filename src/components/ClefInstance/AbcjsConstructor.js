@@ -97,7 +97,7 @@ export default function sheet(target_id,options = {}){
     this.onCorrect = (callback = () => {}) => onCorrectFunctions.push(callback)
     this.onIncorrect = (callback = () => {}) => onIncorrectFunctions.push(callback)
     this.onComplete = (callback = () => {}) => onCompleteFunctions.push(callback)
-    const loopTroughFunctionsArray = (array) => array.length > 0 ? array.forEach(func => func()) : undefined
+    const loopTroughFunctionsArray = (array = [],valuestopass = null) => array.length > 0 ? array.forEach(func => func(valuestopass)) : undefined
 
     let gameInstance = {
         notesPerRound: 10,
@@ -183,13 +183,13 @@ export default function sheet(target_id,options = {}){
         if (isCorrect) {
             const adder = addClassToCurrent(currentNoteIndex,"correct")
             if(adder) {
-                loopTroughFunctionsArray(onCorrectFunctions) 
+                loopTroughFunctionsArray(onCorrectFunctions,keys[currentNoteIndex]) 
                 gameInstance.corrects += 1
             }
         } else {
             const adder = addClassToCurrent(currentNoteIndex,"incorrect")
             if (adder) {
-                loopTroughFunctionsArray(onIncorrectFunctions)
+                loopTroughFunctionsArray(onIncorrectFunctions,keys[currentNoteIndex])
                 gameInstance.fails += 1
             }
         }

@@ -109,7 +109,9 @@ function App() {
     "practiceSelection": 
         <AnimationWrapper key={5}> 
           <PracticeSelection 
-          onStart={(x) => setpage(<ClefParsed optionsObject={x} setter={setpage} onGoBack={() => setpage(pages.practiceSelection)}/>)}
+            onStart={(x) => setpage(<ClefParsed optionsObject={x} setter={setpage} onGoBack={() => setpage(pages.practiceSelection)}/>)}
+            onPrivacyPolicy={() => setpage(pages.privacyPolicy)}
+            onAbout={() => setpage(pages.about)}
           /> 
         </AnimationWrapper>,
   }
@@ -123,8 +125,6 @@ function App() {
         <ConstantUI
         onOptions={() => setpage(pages.options)}
         onHome={() => setpage(pages.practiceSelection)}
-        onPrivacyPolicy={() => setpage(pages.privacyPolicy)}
-        onAbout={() => setpage(pages.about)}
         />
     </div>
   );

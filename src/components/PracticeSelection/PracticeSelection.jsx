@@ -23,7 +23,12 @@ export default function PracticeSelection(props){
                 <div id="practiceSelection" className="width">
                     <ClefSelection outputObject={optsObj.current}/>
                     {startButton} 
+                    <div  className=" footer flex-18 gray">
+                        <span className="button" onClick={props.onAbout}> about </span>• 
+                        <span className="button" onClick={props.onPrivacyPolicy}> privacy policy </span>
+                    </div>
                 </div>
+                
             </div> 
 
         </div>
