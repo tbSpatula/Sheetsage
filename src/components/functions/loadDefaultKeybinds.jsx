@@ -1,4 +1,4 @@
-import Keyrios from "keyrios"
+import keyrios from "keyrios"
 
 export let keysToBind = [
     "A note", "KeyA",
@@ -15,8 +15,8 @@ export default function keybindInit(){
         const key = keysToBind[index]
         const bind = keysToBind[index + 1]
         
-        if(!(Keyrios.existsId(key))){
-            Keyrios.setId(key,bind)
+        if(!(keyrios.exists(key))){
+            keyrios.set(key,bind)
         }
     }
 }

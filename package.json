@@ -8,7 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "abcjs": "^6.0.4",
     "framer-motion": "^7.1.0",
-    "keyrios": "^1.0.4",
+    "keyrios": "^1.1.2",
     "lz-string": "^1.4.4",
     "react": "^18.2.0",
     "react-device-detect": "^2.2.2",

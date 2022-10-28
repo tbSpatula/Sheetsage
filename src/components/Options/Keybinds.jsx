@@ -1,7 +1,7 @@
 
 import UUID from "../functions/UUID"
 import { useEffect,useRef } from "react"
-import Keyrios from "keyrios"
+import keyrios from "keyrios"
 
 export default function Keybinds(props){
 
@@ -32,7 +32,7 @@ export default function Keybinds(props){
         const keys = Object.keys(keysToBind)
         keys.forEach(x => {
             const key = x
-            const keybind = Keyrios.getId(key)
+            const keybind = keyrios.get(key)
             arr.push( 
                 <Container 
                 keyvalues={props.keyvalues}

@@ -4,9 +4,10 @@ import json from "./json/alphabetHotbar.json"
 
 import UUID from "../functions/UUID"
 import is_function from "../functions/ISFUNCTION"
+import { Fragment } from "react"
 
-import React from "react"
-import Keyrios from "keyrios"
+import InputElement from "./InputElement"
+
 function ButtonBuilder(props){
     
     return(
@@ -37,19 +38,19 @@ function button_loop(callback){
         }
 
         return (
-            <React.Fragment key={current.index}>
+            <Fragment key={current.index}>
                 <ButtonBuilder
                     id={id}
                     onClick={() => callback(current)}
                     display={current.display}
                 />
-                <Keyrios.Flicker
+                <InputElement
                     keybindId={current.keyID}
                     keybind={current.keyinput}
                     onkeydown={keydown}
                     onkeyup={keyup}
                 />
-            </React.Fragment>
+            </Fragment>
         )
     })
 }

@@ -1,5 +1,5 @@
 
-import Keyrios from "keyrios"
+import keyrios from "keyrios"
 import "./Options.sass"
 import { useEffect,useState ,useRef} from "react"
 import UUID from "../functions/UUID"
@@ -18,7 +18,7 @@ function BackdropAdd(props){
         const event = (e) => {
             e.preventDefault()
             try {
-                Keyrios.setId(keyid,e.code)
+                keyrios.set(keyid,e.code)
                 props.onComplete()
             } catch(error){
 
