@@ -6,8 +6,7 @@ import UUID from "../functions/UUID"
 import is_function from "../functions/ISFUNCTION"
 
 import React from "react"
-import Keyrios from "../functions/Keyrios"
-
+import Keyrios from "keyrios"
 function ButtonBuilder(props){
     
     return(

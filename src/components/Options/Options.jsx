@@ -1,5 +1,5 @@
 
-import Keyrios from "../functions/Keyrios"
+import Keyrios from "keyrios"
 import "./Options.sass"
 import { useEffect,useState ,useRef} from "react"
 import UUID from "../functions/UUID"
@@ -78,9 +78,9 @@ export default function Options(props) {
 
     const keyvalues = (() => {
         let arr = []
-        for ( var i = 0, len = localStorage.length; i < len; ++i ) {
-            arr.push( localStorage.getItem(localStorage.key( i ) ))
-          }
+        for ( const[key,value] of Object.entries(JSON.parse(localStorage.getItem("keyrios")))){
+            arr.push(value)
+        }
         return arr
     })()
 

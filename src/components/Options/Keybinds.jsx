@@ -1,19 +1,13 @@
 
 import UUID from "../functions/UUID"
 import { useEffect,useRef } from "react"
-import Keyrios from "../functions/Keyrios"
+import Keyrios from "keyrios"
 
 export default function Keybinds(props){
 
     const clickevent = props.onClick
 
-    const keysToBind = ((() => {
-        let arr = []
-        for ( var i = 0, len = localStorage.length; i < len; ++i ) {
-            arr.push( localStorage.key( i ) )
-          }
-        return arr
-    })()).filter(x => x.startsWith("keyrios.")).sort()
+    const keysToBind = JSON.parse(localStorage.getItem("keyrios"))
 
     const Container = (props) =>{ 
 
@@ -33,12 +27,14 @@ export default function Keybinds(props){
         )
     }
 
-    return (
-        <>
-        {keysToBind.map(x => {
-            const key = x.replace("keyrios.","")
+    function loopThrough(){
+        let arr = []
+        const keys = Object.keys(keysToBind)
+        keys.forEach(x => {
+            const key = x
             const keybind = Keyrios.getId(key)
-            return ( 
+            console.log(keybind)
+            arr.push( 
                 <Container 
                 keyvalues={props.keyvalues}
                 key={key}
@@ -46,7 +42,14 @@ export default function Keybinds(props){
                 keybind={keybind}
                 />
             )
-        })}
+        })
+        console.log(arr)
+        return arr
+    }
+
+    return (
+        <>
+        { loopThrough()}
         </>
     )
 }
