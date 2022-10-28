@@ -14,8 +14,7 @@ export default function keybindInit(){
     for (let index = 0; index < keysToBind.length ; index+= 2) {
         const key = keysToBind[index]
         const bind = keysToBind[index + 1]
-    
-        console.log(Keyrios.existsId(key))
+        
         if(!(Keyrios.existsId(key))){
             Keyrios.setId(key,bind)
         }
