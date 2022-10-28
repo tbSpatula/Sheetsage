@@ -33,7 +33,6 @@ export default function Keybinds(props){
         keys.forEach(x => {
             const key = x
             const keybind = Keyrios.getId(key)
-            console.log(keybind)
             arr.push( 
                 <Container 
                 keyvalues={props.keyvalues}
@@ -43,7 +42,6 @@ export default function Keybinds(props){
                 />
             )
         })
-        console.log(arr)
         return arr
     }
 
